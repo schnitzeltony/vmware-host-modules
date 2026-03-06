@@ -41,6 +41,7 @@
     compat_skb_set_network_header(skb, sizeof (struct ethhdr)),  \
     dev_queue_xmit(skb)                                   \
   )
+
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 9, 0)
 #   define dev_lock_list()    rcu_read_lock()
 #   define dev_unlock_list()  rcu_read_unlock()
